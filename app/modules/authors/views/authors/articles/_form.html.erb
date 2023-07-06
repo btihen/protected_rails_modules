@@ -1,0 +1,32 @@
+<%= form_with(model: authors_article) do |form| %>
+  <% if authors_article.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(authors_article.errors.count, "error") %> prohibited this authors_article from being saved:</h2>
+
+      <ul>
+        <% authors_article.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :body, style: "display: block" %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div>
+    <%= form.label :authors_user_id, style: "display: block" %>
+    <%= form.text_field :authors_user_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
