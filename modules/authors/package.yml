@@ -1,0 +1,16 @@
+# # Turn on dependency checks for this package
+enforce_dependencies: true
+
+# # Turn on privacy checks for this package
+enforce_privacy: true
+
+# # this allows you to modify what your package's public path is within the package
+# # code that this package publicly shares with other packages
+public_path: public/
+
+# # A list of this package's dependencies
+# # Note that packages in this list require their own `package.yml` file
+# # '.' - we are dependent on the root application
+# # dependencies:
+dependencies:
+- 'modules/rails'

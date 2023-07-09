@@ -71,3 +71,6 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "packwerk"
+gem 'graphwerk', group: %i[development test]

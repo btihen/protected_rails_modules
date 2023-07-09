@@ -99,6 +99,14 @@ GEM
   specs:
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
+    ast (2.4.2)
+    better_html (2.0.2)
+      actionview (>= 6.0)
+      activesupport (>= 6.0)
+      ast (~> 2.0)
+      erubi (~> 1.4)
+      parser (>= 2.4)
+      smart_properties
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -114,6 +122,7 @@ GEM
       xpath (~> 3.2)
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
+    constant_resolver (0.2.0)
     crass (1.0.6)
     cssbundling-rails (1.2.0)
       railties (>= 6.0.0)
@@ -125,6 +134,11 @@ GEM
     erubi (1.12.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    graphwerk (1.2.1)
+      activesupport
+      packwerk
+      ruby-graphviz
+      sorbet-runtime
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
@@ -162,6 +176,20 @@ GEM
     nokogiri (1.15.3)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
+    packwerk (3.0.1)
+      activesupport (>= 6.0)
+      ast
+      better_html
+      bundler
+      constant_resolver (>= 0.2.0)
+      parallel
+      parser
+      sorbet-runtime (>= 0.5.9914)
+      zeitwerk (>= 2.6.1)
+    parallel (1.23.0)
+    parser (3.2.2.3)
+      ast (~> 2.4.1)
+      racc
     public_suffix (5.0.1)
     puma (6.3.0)
       nio4r (~> 2.0)
@@ -190,11 +218,15 @@ GEM
     reline (0.3.5)
       io-console (~> 0.5)
     rexml (3.2.5)
+    ruby-graphviz (1.2.5)
+      rexml
     rubyzip (2.3.2)
     selenium-webdriver (4.10.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    smart_properties (1.17.0)
+    sorbet-runtime (0.5.10908)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -243,8 +275,10 @@ DEPENDENCIES
   cssbundling-rails
   debug
   error_highlight (>= 0.4.0)
+  graphwerk
   jbuilder
   jsbundling-rails
+  packwerk
   puma (>= 5.0)
   rails!
   redis (>= 4.0.1)
