@@ -6,7 +6,7 @@
     "@hotwired/turbo-rails": "^7.3.0",
     "autoprefixer": "^10.4.14",
     "esbuild": "^0.18.11",
-    "postcss": "^8.4.25",
+    "postcss": "^8.4.31",
     "tailwindcss": "^3.3.2"
   },
   "scripts": {
